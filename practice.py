@@ -17,3 +17,28 @@ def be_cheerful():
         i = print("good morning!")
     return i
 be_cheerful()
+
+# Using for , print multiples of 3 from -300 to 0. skip -3 and -6.
+for i in range(-300,0,3):
+    if i == -6:
+        break
+    else:
+        print(i)
+
+# print integers from 2000 to 5280, using a while
+x = 2000
+while x < 5280:
+    print(x)
+    x += 1
+from itertools import product
+# if 2 given numbers represents your birth month and day if either order, print"How did you know?", else print "Just another day.."
+def birth_compare(month,day):
+    num = int(input("What's your first number? = "))
+    num2 = int(input("what's your second number? = "))
+    if(num == month and num2 == day) or (num == day and num2 == month):
+            print("how did you know?")
+    else:
+        print("just another day")
+    return
+
+birth_compare(4,5)
