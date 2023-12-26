@@ -42,3 +42,53 @@ def birth_compare(month,day):
     return
 
 birth_compare(4,5)
+
+# Write a function that determines whether a given year is a leap year. If a year is divisible 
+# four, its a leap year, unless it is divisible by 100. However, if it divisible by 400, then it is
+
+def leap_year(year):
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 ==0:
+                print(f"{year} is a leap year!")
+            else:
+                print(f"{year} is not leap year")
+        else:
+            print("It's  leap year")
+    else:
+        print(f"{year} is not a leap year")
+    return
+
+leap_year(2023)
+
+# print all integer multiples of 5, from 512 to 4096. Afterward, also print how many they were
+count = 0
+for i in range(512 , 4096):
+    if (i % 5 == 0):
+        print(i)
+        count += 1
+print(count)
+
+# print multiplies of 6 up to 60,000. Using while
+i = 0
+while i < 60000:
+    if i % 6 ==0:
+        print(i)
+    i += 1
+
+# print integers 1 to 100. if divisible by 5, print "coding" instead. If by 10, also print "Dojo".
+for i in range(1, 100):
+    if i % 10 == 0:
+        print("dojo")
+    elif i % 5 == 0:
+        print("coding")
+
+state = input("What's is your state? = ")
+print(f"i live in {state} state.")
+
+# Add odd integers from -300000 to 300000 and print the final sum.
+sum = 0
+for i in range(-300000,300000):
+    if i % 2 != 0:
+        sum += i
+print(sum)
