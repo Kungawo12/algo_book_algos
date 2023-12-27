@@ -87,8 +87,17 @@ state = input("What's is your state? = ")
 print(f"i live in {state} state.")
 
 # Add odd integers from -300000 to 300000 and print the final sum.
+
 sum = 0
-for i in range(-300000,300000):
-    if i % 2 != 0:
-        sum += i
-print(sum)
+for i in range(-300000, 300001, 2):
+    sum += i
+    print(sum)
+
+
+
+
+# log positives numbers starting at 2016, counting down by fours(exclude 0), without for loops
+x = 2016
+while x > 0:
+    print(x)
+    x -= 4
