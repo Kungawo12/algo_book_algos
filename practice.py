@@ -101,3 +101,45 @@ x = 2016
 while x > 0:
     print(x)
     x -= 4
+
+#Change the all the positive number in list to string in Function.
+def con_to_string(list): #converting the positives numbers into strings.
+    for i in range(len(list)):
+        if list[i] > 0:
+            list[i] = "big"
+    return list
+print(con_to_string([-1,3,5,-5]))
+
+#given ([2,4,6,8,10],3), change the given array to [6,8,10] and return it
+def decrementing_list(list,y):
+    list = list[y-1:]
+    return list
+
+print(decrementing_list([2,4,6,8,10],3))
+
+# Kenny tries to stay safe, but somehow every day something happens. Out of the last 100 days, 
+# there were 10 days with volcanos, 15 others with tsunamis, 20 earthquakes, 25 blizzards, 
+# and 30 meteors(for 100 days total). if this possibilities continue , write what_happens_today() 
+# to print the day outcome.
+import random
+def what_happens_today():
+    volcano_prob = 0.1
+    tsunamis_prob = 0.15
+    earthquakes_prob = 0.2
+    blizzards_prob = 0.25
+    meteors_prob = 0.3
+    
+    events = ["volcano","tsunamis", "earthquakes", "blizzards", "meteors" ]
+    event = random.choice(events)
+    return f" Today event will be :{event}"
+
+print(what_happens_today())
+
+#Factorial
+def Factorial(num):
+    fac_num = 1
+    for i in range(num+1):
+        if i > 0:
+            fac_num *= i
+    return fac_num 
+print(Factorial(3))
